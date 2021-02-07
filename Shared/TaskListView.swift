@@ -13,8 +13,19 @@ struct TaskListView: View {
 	
 	var body: some View {
 		List {
-			ForEach(taskStore.tasks) {
-				TaskView(title: $0.title)
+			ForEach(taskStore.tasks) { task in
+				#if os(macOS)
+				TaskView(title: task.title)
+					.contextMenu {
+						Button("Delete") {
+							taskStore.remove(task)
+						}
+					}
+					//.animation(.easeIn)
+				#else
+				TaskView(title: task.title)
+					//.animation(.easeIn)
+				#endif
 			}.onDelete { indexSet in
 				indexSet.forEach { (index) in
 					let task = taskStore.tasks[index]
@@ -22,6 +33,7 @@ struct TaskListView: View {
 				}
 			}
 		}
+		.animation(.easeIn)
 	}
 }
 

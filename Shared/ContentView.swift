@@ -10,22 +10,10 @@ import SwiftUI
 struct ContentView: View {
 	
 	let taskStore: TaskStore
-	@State private var newTaskTitle = ""
-	
-	private var newTaskView: some View {
-		HStack {
-			TextField("Something to do", text: $newTaskTitle)
-			Button("Add task") {
-				let task = Task(title: newTaskTitle)
-				taskStore.add(task)
-				newTaskTitle = ""
-			}.disabled(newTaskTitle.isEmpty)
-		}.padding()
-	}
 	
 	var body: some View {
 		VStack {
-			newTaskView
+			NewTaskView(taskStore: taskStore)
 			TaskListView(taskStore: taskStore)
 		}
 	}

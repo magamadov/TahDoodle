@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct NewTaskView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+	
+	let taskStore: TaskStore
+	
+	@State private var newTaskTitle = ""
+	
+	var body: some View {
+		HStack {
+			TextField("Something to do", text: $newTaskTitle)
+			Button("Add task") {
+				let task = Task(title: newTaskTitle)
+				taskStore.add(task)
+				newTaskTitle = ""
+			}.disabled(newTaskTitle.isEmpty)
+		}.padding()
+	}
 }
+
 
 struct NewTaskView_Previews: PreviewProvider {
     static var previews: some View {
-        NewTaskView()
+			NewTaskView(taskStore: .sample)
     }
 }
