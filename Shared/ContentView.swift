@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
+	
+	let taskStore: TaskStore
+	@State private var newTaskTitle = ""
+	
+	private var newTaskView: some View {
+		HStack {
+			TextField("Something to do", text: $newTaskTitle)
+			Button("Add task") {
+				let task = Task(title: newTaskTitle)
+				taskStore.add(task)
+				newTaskTitle = ""
+			}.disabled(newTaskTitle.isEmpty)
+		}.padding()
+	}
+	
+	var body: some View {
+		VStack {
+			newTaskView
+			TaskListView(taskStore: taskStore)
+		}
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView(taskStore: .sample)
+		
+	}
 }

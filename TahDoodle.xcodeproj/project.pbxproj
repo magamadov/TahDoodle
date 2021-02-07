@@ -13,6 +13,14 @@
 		D826916725CAEBA5001EA703 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826915225CAEBA4001EA703 /* ContentView.swift */; };
 		D826916825CAEBA5001EA703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D826915325CAEBA5001EA703 /* Assets.xcassets */; };
 		D826916925CAEBA5001EA703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D826915325CAEBA5001EA703 /* Assets.xcassets */; };
+		D826917525CB058D001EA703 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826917425CB058D001EA703 /* TaskView.swift */; };
+		D826917625CB058D001EA703 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826917425CB058D001EA703 /* TaskView.swift */; };
+		D826917A25CB89A5001EA703 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826917925CB89A5001EA703 /* Task.swift */; };
+		D826917B25CB89A5001EA703 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826917925CB89A5001EA703 /* Task.swift */; };
+		D826917F25CB8B02001EA703 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826917E25CB8B02001EA703 /* TaskStore.swift */; };
+		D826918025CB8B02001EA703 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826917E25CB8B02001EA703 /* TaskStore.swift */; };
+		D826918425CBA634001EA703 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826918325CBA634001EA703 /* TaskListView.swift */; };
+		D826918525CBA634001EA703 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826918325CBA634001EA703 /* TaskListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,10 @@
 		D826916025CAEBA5001EA703 /* TahDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TahDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D826916225CAEBA5001EA703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D826916325CAEBA5001EA703 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		D826917425CB058D001EA703 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		D826917925CB89A5001EA703 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		D826917E25CB8B02001EA703 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		D826918325CBA634001EA703 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,10 @@
 			children = (
 				D826915125CAEBA4001EA703 /* TahDoodleApp.swift */,
 				D826915225CAEBA4001EA703 /* ContentView.swift */,
+				D826917425CB058D001EA703 /* TaskView.swift */,
+				D826917925CB89A5001EA703 /* Task.swift */,
+				D826917E25CB8B02001EA703 /* TaskStore.swift */,
+				D826918325CBA634001EA703 /* TaskListView.swift */,
 				D826915325CAEBA5001EA703 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -187,8 +203,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D826917F25CB8B02001EA703 /* TaskStore.swift in Sources */,
+				D826917A25CB89A5001EA703 /* Task.swift in Sources */,
+				D826917525CB058D001EA703 /* TaskView.swift in Sources */,
 				D826916625CAEBA5001EA703 /* ContentView.swift in Sources */,
 				D826916425CAEBA5001EA703 /* TahDoodleApp.swift in Sources */,
+				D826918425CBA634001EA703 /* TaskListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +216,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D826918025CB8B02001EA703 /* TaskStore.swift in Sources */,
+				D826917B25CB89A5001EA703 /* Task.swift in Sources */,
+				D826917625CB058D001EA703 /* TaskView.swift in Sources */,
 				D826916725CAEBA5001EA703 /* ContentView.swift in Sources */,
 				D826916525CAEBA5001EA703 /* TahDoodleApp.swift in Sources */,
+				D826918525CBA634001EA703 /* TaskListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
